@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: CameraAnimation(),
     );
   }
@@ -31,16 +32,32 @@ class _CameraAnimationState extends State<CameraAnimation> {
 
   @override
   void initState() {
-    () async {
-      String path = await ProcessImage().getImage();
-      platform.invokeMethod('sendImageUrl', {'url': path});
-    }();
-
+    processImage();
     super.initState();
+  }
+
+  processImage() async {
+    var res = await platform.invokeMethod(
+      'sendSettings',
+    );
+    String scanTitle = res["ScanTitle"];
+    String cropTitle = res["CropTitle"];
+    String cropBlackAndWhiteTitle = res["CropBlackAndWhiteTitle"];
+
+    String path = await ProcessImage().getImage(
+        scanTitle: scanTitle,
+        cropTitle: cropTitle,
+        cropBlackAndWhiteTitle: cropBlackAndWhiteTitle);
+
+    platform.invokeMethod('getImageUrl', {'url': path});
   }
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox();
+    return const Center(
+      child: CircularProgressIndicator(
+        color: Colors.white,
+      ),
+    );
   }
 }
