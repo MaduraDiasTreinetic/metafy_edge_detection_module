@@ -16,7 +16,7 @@ dependencies:
   metafy_edge_detection:
     git:
       url: https://github.com/MaduraDiasTreinetic/metafy_edge_detection.git
-      ref: main
+      ref: v1.4
 
   permission_handler: ^10.2.0
   path_provider: 2.0.10

@@ -40,6 +40,9 @@ class _CameraAnimationState extends State<CameraAnimation> {
     var res = await platform.invokeMethod(
       'sendSettings',
     );
+
+    print('result-------->>>> $res');
+
     String scanTitle = res["ScanTitle"];
     String cropTitle = res["CropTitle"];
     String cropBlackAndWhiteTitle = res["CropBlackAndWhiteTitle"];
