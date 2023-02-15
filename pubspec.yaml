@@ -13,14 +13,17 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
-  metafy_edge_detection:
-    git:
-      url: https://github.com/MaduraDiasTreinetic/metafy_edge_detection.git
-      ref: v1.4
+  # metafy_edge_detection:
+  #   git:
+  #     url: https://github.com/MaduraDiasTreinetic/metafy_edge_detection.git
+  #     ref: v1.5
 
-  permission_handler: ^10.2.0
-  path_provider: 2.0.10
-  path: 1.8.1
+  # document_scanner_flutter: ^0.2.7
+  cunning_document_scanner: ^1.1.2
+
+  # permission_handler: ^10.2.0
+  # path_provider: 2.0.10
+  # path: 1.8.1
 
 dev_dependencies:
   flutter_test:

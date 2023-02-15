@@ -1,43 +1,73 @@
+import 'package:cunning_document_scanner/cunning_document_scanner.dart';
 import 'package:flutter/material.dart';
-import 'package:metafy_edge_detection/edge_detection.dart';
-import 'package:path/path.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class ProcessImage {
-  Future<String> getImage(
+  Future<String> getImageIos(
       {@required String? scanTitle,
       @required String? cropTitle,
       @required String? cropBlackAndWhiteTitle}) async {
     String imagePath = '';
 
-    bool isCameraGranted = await Permission.camera.request().isGranted;
-    if (!isCameraGranted) {
-      isCameraGranted =
-          await Permission.camera.request() == PermissionStatus.granted;
-    }
+    // bool isCameraGranted = await Permission.camera.request().isGranted;
+    // if (!isCameraGranted) {
+    //   isCameraGranted =
+    //       await Permission.camera.request() == PermissionStatus.granted;
+    // }
 
-    if (!isCameraGranted) {
-      return imagePath;
-    }
+    // if (!isCameraGranted) {
+    //   return imagePath;
+    // }
 
-    imagePath = join((await getApplicationSupportDirectory()).path,
-        "${(DateTime.now().millisecondsSinceEpoch / 1000).round()}.jpeg");
+    // imagePath = join((await getApplicationSupportDirectory()).path,
+    //     "${(DateTime.now().millisecondsSinceEpoch / 1000).round()}.jpeg");
 
     try {
-      await EdgeDetection.detectEdge(
-        imagePath,
-        canUseGallery: true,
-        androidScanTitle: scanTitle ?? 'Scanning',
-        androidCropTitle: cropTitle ?? 'Crop',
-        androidCropBlackWhiteTitle: cropBlackAndWhiteTitle ?? 'Black White',
-        androidCropReset: 'Reset',
-      );
+      // await EdgeDetection.detectEdge(
+      //   imagePath,
+      //   canUseGallery: true,
+      //   androidScanTitle: scanTitle ?? 'Scanning',
+      //   androidCropTitle: cropTitle ?? 'Crop',
+      //   androidCropBlackWhiteTitle: cropBlackAndWhiteTitle ?? 'Black White',
+      //   androidCropReset: 'Reset',
+      // );
       print('image path------->>>>> $imagePath');
       return imagePath;
     } catch (e) {
-      print(e);
+      print("image path error  $e");
       return imagePath;
     }
+  }
+
+  Future<String> getImageAndroid(
+      {@required String? nextButtonTitle,
+      @required String? okButtonTitle,
+      @required BuildContext? context}) async {
+    String path = "";
+    try {
+      // var image = await DocumentScannerFlutter.launch(
+      //   context!,
+      //   labelsConfig: {
+      //     ScannerLabelsConfig.ANDROID_NEXT_BUTTON_LABEL:
+      //         nextButtonTitle ?? "Next Step",
+      //     ScannerLabelsConfig.ANDROID_OK_LABEL: okButtonTitle ?? "OK"
+      //   },
+      // );
+
+      List<String> pictures = [];
+      try {
+        pictures = await CunningDocumentScanner.getPictures() ?? [];
+
+        print(pictures);
+      } catch (exception) {
+        print(exception);
+        // Handle exception here
+      }
+      path = pictures.first.toString();
+
+      print('----------->>>>>>>>>> image path $path');
+    } catch (e) {
+      print(e);
+    }
+    return path;
   }
 }

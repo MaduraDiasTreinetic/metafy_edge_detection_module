@@ -37,7 +37,6 @@ xcuserdata
 Icon?
 .tags*
 
-build/
 .android/
 .ios/
 .flutter-plugins
@@ -48,3 +47,4 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+pubspec.lock

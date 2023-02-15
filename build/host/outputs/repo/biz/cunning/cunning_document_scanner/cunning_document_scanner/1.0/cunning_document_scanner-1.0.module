@@ -1,0 +1,261 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "biz.cunning.cunning_document_scanner",
+    "module": "cunning_document_scanner",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.4"
+    }
+  },
+  "variants": [
+    {
+      "name": "debugVariantAllApiPublication",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_debug",
+          "version": {
+            "requires": "1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cunning_document_scanner-1.0-debug.aar",
+          "url": "cunning_document_scanner-1.0-debug.aar",
+          "size": 19255,
+          "sha512": "89c325310b744059c55f182473e48bc3f6ea68a58687281ab323602f63aa255165577ad44e2a0f62bf0b05097498afdef26dfda9785e2521945ffbc3bd2fda10",
+          "sha256": "8837d551aa948a7375df00dcedbb4013f62323747371bce74d8461c223efb923",
+          "sha1": "3db9b73e8d170bf4a60b47d52cbc3cae63e9ac8f",
+          "md5": "07d46bd139724be6e7e21479cc3dc51d"
+        }
+      ]
+    },
+    {
+      "name": "debugVariantAllRuntimePublication",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "debug",
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_debug",
+          "version": {
+            "requires": "1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk7",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "com.websitebeaver",
+          "module": "documentscanner",
+          "version": {
+            "requires": "1.0.5"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.5.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cunning_document_scanner-1.0-debug.aar",
+          "url": "cunning_document_scanner-1.0-debug.aar",
+          "size": 19255,
+          "sha512": "89c325310b744059c55f182473e48bc3f6ea68a58687281ab323602f63aa255165577ad44e2a0f62bf0b05097498afdef26dfda9785e2521945ffbc3bd2fda10",
+          "sha256": "8837d551aa948a7375df00dcedbb4013f62323747371bce74d8461c223efb923",
+          "sha1": "3db9b73e8d170bf4a60b47d52cbc3cae63e9ac8f",
+          "md5": "07d46bd139724be6e7e21479cc3dc51d"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantAllApiPublication",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "release",
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cunning_document_scanner-1.0-release.aar",
+          "url": "cunning_document_scanner-1.0-release.aar",
+          "size": 18891,
+          "sha512": "44d48be2aef29d413232305b668cf8d85ff02bfbaf5e7c8c8628bc682112f1c139d92c68da798049d94db6b03e1d2a588ce0ff90ad78d8ce8aeba11d14859369",
+          "sha256": "104df86ca1884fdbf4b36977018c6dbc4467197b74ce8d7424902d44d1946cad",
+          "sha1": "a9eca5613138ae0164d90f7478121b3133430572",
+          "md5": "9485d6bf150119f3f4ad2a002913aeb0"
+        }
+      ]
+    },
+    {
+      "name": "releaseVariantAllRuntimePublication",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "release",
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_release",
+          "version": {
+            "requires": "1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk7",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "com.websitebeaver",
+          "module": "documentscanner",
+          "version": {
+            "requires": "1.0.5"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.5.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cunning_document_scanner-1.0-release.aar",
+          "url": "cunning_document_scanner-1.0-release.aar",
+          "size": 18891,
+          "sha512": "44d48be2aef29d413232305b668cf8d85ff02bfbaf5e7c8c8628bc682112f1c139d92c68da798049d94db6b03e1d2a588ce0ff90ad78d8ce8aeba11d14859369",
+          "sha256": "104df86ca1884fdbf4b36977018c6dbc4467197b74ce8d7424902d44d1946cad",
+          "sha1": "a9eca5613138ae0164d90f7478121b3133430572",
+          "md5": "9485d6bf150119f3f4ad2a002913aeb0"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantAllApiPublication",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "profile",
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cunning_document_scanner-1.0-profile.aar",
+          "url": "cunning_document_scanner-1.0-profile.aar",
+          "size": 18889,
+          "sha512": "cbc600d48dd708d0e98632439034b4916c86f91b09ffdf8321d0833d8b2f32baa22b70c5cf4796d3e62a216cc43be43a732dd9fa5be66dbfc7ec42d22f447ce8",
+          "sha256": "7800ae9b38cf62ca317f52c4faf78dbe79472db5c6ab4903c969ba574ddbc7bc",
+          "sha1": "f50f92fff7a8cd662d4258c56631a728afe1a3d7",
+          "md5": "f275cf2bab2c44c1756e9cf1c94e3292"
+        }
+      ]
+    },
+    {
+      "name": "profileVariantAllRuntimePublication",
+      "attributes": {
+        "com.android.build.api.attributes.BuildTypeAttr": "profile",
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "io.flutter",
+          "module": "flutter_embedding_profile",
+          "version": {
+            "requires": "1.0.0-3316dd8728419ad3534e3f6112aa6291f587078a"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk7",
+          "version": {
+            "requires": "1.7.10"
+          }
+        },
+        {
+          "group": "com.websitebeaver",
+          "module": "documentscanner",
+          "version": {
+            "requires": "1.0.5"
+          }
+        },
+        {
+          "group": "androidx.appcompat",
+          "module": "appcompat",
+          "version": {
+            "requires": "1.5.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "cunning_document_scanner-1.0-profile.aar",
+          "url": "cunning_document_scanner-1.0-profile.aar",
+          "size": 18889,
+          "sha512": "cbc600d48dd708d0e98632439034b4916c86f91b09ffdf8321d0833d8b2f32baa22b70c5cf4796d3e62a216cc43be43a732dd9fa5be66dbfc7ec42d22f447ce8",
+          "sha256": "7800ae9b38cf62ca317f52c4faf78dbe79472db5c6ab4903c969ba574ddbc7bc",
+          "sha1": "f50f92fff7a8cd662d4258c56631a728afe1a3d7",
+          "md5": "f275cf2bab2c44c1756e9cf1c94e3292"
+        }
+      ]
+    }
+  ]
+}

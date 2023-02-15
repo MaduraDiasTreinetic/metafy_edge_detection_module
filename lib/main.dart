@@ -47,10 +47,13 @@ class _CameraAnimationState extends State<CameraAnimation> {
     String cropTitle = res["CropTitle"];
     String cropBlackAndWhiteTitle = res["CropBlackAndWhiteTitle"];
 
-    String path = await ProcessImage().getImage(
-        scanTitle: scanTitle,
-        cropTitle: cropTitle,
-        cropBlackAndWhiteTitle: cropBlackAndWhiteTitle);
+    // String path = await ProcessImage().getImageIos(
+    //     scanTitle: scanTitle,
+    //     cropTitle: cropTitle,
+    //     cropBlackAndWhiteTitle: cropBlackAndWhiteTitle);
+
+    String path = await ProcessImage().getImageAndroid(
+        nextButtonTitle: null, okButtonTitle: null, context: context);
 
     platform.invokeMethod('getImageUrl', {'url': path});
   }
